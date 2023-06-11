@@ -4,7 +4,7 @@ import handlebars from "vite-plugin-handlebars";
 import jsconfigPaths from "vite-jsconfig-paths";
 
 export default defineConfig({
-  base: "/vite-js-template/",
+  base: "/parallax/",
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, "./src/partials"),
