@@ -24,6 +24,7 @@ body {
 }
 
 .logo {
+  position: absolute;
   width: 150px;
   height: 150px;
   background-repeat: no-repeat;
@@ -31,16 +32,46 @@ body {
 
 .layers {
   perspective: 1000px;
+  -webkit-perspective: 1000;
 
   &__container {
     height: 100vh;
     transform-style: preserve-3d;
+    overflow: hidden;
+    transform: rotateX(var(--move-y)) rotateY(var(--move-x));
   }
 
   &__item {
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    position: absolute;
+    top: -5vw;
+    left: -5vw;
+    right: -5vw;
+    bottom: -5vw;
+    background-size: cover;
+    background-position: center;
   }
+}
+
+.layer-1 {
+  transform: translateZ(-55px) scale(0.8);
+}
+
+.layer-2 {
+  transform: translateZ(80px) scale(0.8);
+}
+
+.layer-3 {
+  transform: translateZ(180px) scale(0.8);
+}
+
+.layer-4 {
+  transform: translateZ(190px) scale(0.8);
+}
+
+.layer-5 {
+  transform: translateZ(300px) scale(0.8);
+}
+
+.layer-6 {
+  transform: translateZ(380px) scale(0.8);
 }
